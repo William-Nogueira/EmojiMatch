@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>EmojiMatch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Saira+Condensed:wght@500&display=swap"
+    rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Tela Inicial -->
+
+  <div id="tela-inicial" class="tela-inicial visivel">
+    <h1>👋 EmojiMatch! 👋</h1>
+    <div class="tela-inicial-btn">
+      <button id="inicio-btn">Jogar</button>
+    </div>
+    <div id="footer">
+      <p>Developed with ❤️ by <a href="https://github.com/William-Nogueira" target="_blank">William Nogueira</a></p>
+    </div>
+  </div>
+
+  <!-- Header -->
+
+  <header class="header">
+    <div class="container">
+      <div class="contadores">
+        <div class="contador-item">
+          <h4 class="header-titulo">Movimentos</h4>
+          <div class="header-num">
+            <span id="mov">00</span>/<span id="mov-total">20</span>
+          </div>
+        </div>
+      </div>
+      <div class="nivel">
+        <h4 class="header-titulo">Nivel</h4>
+        <div class="header-num"><span id="nivel">01</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mesa -->
+
+  <main>
+    <div id="mesa" class="mesa"></div>
+    <div id="footer">
+      <p>Developed with ❤️ by <a href="https://github.com/William-Nogueira">William Nogueira</a></p>
+    </div>
+
+    <!-- Modais -->
+
+    <div id="proximoNivel" class="proximo-nivel">
+      <div class="modal">
+        <h2>Muito bem!</h2>
+        <button id="proximoNivel-btn">Próximo nivel</button>
+      </div>
+    </div>
+
+    <div id="gameOver" class="game-over">
+      <div class="modal">
+        <h2>Game Over</h2>
+        <p>Você ficou sem movimentos 😭</p>
+        <button class="reiniciar">Reiniciar</button>
+      </div>
+    </div>
+
+    <div id="endGame" class="end-game">
+      <div class="modal">
+        <h2>Parabéns</h2>
+        <p>Você zerou o jogo! 🏆</p>
+        <button class="reiniciar">Reiniciar</button>
+      </div>
+    </div>
+  </main>
+
+  <audio src="audio/acertou.mp3" class="audio" id="audio-acertou" preload="auto"></audio>
+  <audio src="audio/errou.mp3" class="audio" id="audio-errou" preload="auto"></audio>
+  <audio src="audio/carta.mp3" class="audio" id="audio-carta" preload="auto"></audio>
+
+  <script src="js/variaveisGlobais.js"></script>
+  <script src="js/carta.js"></script>
+  <script src="js/niveis.js"></script>
+</body>
+
+</html>
