@@ -30,7 +30,7 @@ let niveis = [
       grupoCartas[2],
       grupoCartas[3]
     ),
-    movimentosMax: 28,
+    movimentosMax: 26,
   },
   {
     cartas: grupoCartas[0].concat(

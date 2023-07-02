@@ -1,5 +1,6 @@
 :root {
   --gradient: linear-gradient(130deg, #f17c33, #e4384f);
+  --shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -226,7 +227,7 @@ main {
 .carta {
   border-radius: 0.3em;
   background-image: var(--gradient);
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
   position: relative;
   transition: 0.5s;
   cursor: pointer;
@@ -243,7 +244,7 @@ main {
   transform: rotateY(-180deg);
   backface-visibility: hidden;
   background-color: white;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
   border-radius: 0.3em;
   display: flex;
   justify-content: center;
@@ -343,7 +344,7 @@ main {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
 }
 
 @media (max-width: 675px) {
@@ -414,4 +415,23 @@ button:focus {
 
 #footer a {
   color: #e4384f;
+}
+
+#carta-coringa {
+  display: none;
+  background-image: none;
+  background-color: white;
+  box-shadow: var(--shadow);
+  border-radius: 0.3em;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 675px) {
+  #carta-coringa {
+    display: none;
+  }
 }

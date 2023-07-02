@@ -2,7 +2,6 @@
 
 function revelar() {
   let cartasReveladas;
-  let cartasNaoReveladas;
   let totalReveladas = document.querySelectorAll(".revelada:not(.acerto)");
 
   if (totalReveladas.length > 1) {
@@ -20,6 +19,30 @@ function revelar() {
   }
 
   comparar(cartasReveladas);
+}
+
+// Carta coringa
+
+function revelarTodasAsCartas() {
+  audioAcerto = document.querySelector("#audio-ding");
+  audioAcerto.volume = 0.8;
+  audioAcerto.play();
+  document.querySelectorAll(".carta:not(.acerto)").forEach(function (elemento) {
+    elemento.classList.add("revelada");
+  });
+
+  setTimeout(function () {
+    document
+      .querySelectorAll(".carta:not(.acerto)")
+      .forEach(function (elemento) {
+        elemento.classList.remove("revelada");
+      });
+  }, 2000);
+}
+
+function usarCartaCoringa() {
+  revelarTodasAsCartas();
+  document.querySelector("#carta-coringa").style.display = "none";
 }
 
 // Verifica se acertou ou errou
@@ -61,7 +84,7 @@ function errou(cartas) {
   });
 
   let audioErrou = document.querySelector("#audio-errou");
-  audioErrou.volume = 0.4;
+  audioErrou.volume = 0.3;
   audioErrou.play();
   atualizaContador();
   setTimeout(function () {

@@ -18,6 +18,11 @@ function iniciaJogo() {
 
 function iniciar() {
   movimentos = 0;
+  if (nivelAtual >= 2) {
+    document
+      .querySelector("#carta-coringa")
+      .addEventListener("click", usarCartaCoringa);
+  }
   reparteCartas(niveis[nivelAtual].cartas);
   document.querySelector("#mov").innerText = "00";
   maxContador();
@@ -46,6 +51,9 @@ function atualizaNivel() {
 
 function proximoNivel() {
   nivelAtual++;
+  if (nivelAtual >= 2) {
+    document.querySelector("#carta-coringa").style.display = "inline-block";
+  }
   atualizaNivel();
   iniciar();
 }
@@ -64,8 +72,6 @@ function embaralhaCartas(cartas) {
 // Reparte
 
 function reparteCartas(cartas) {
-  let coluna = "coluna5";
-
   let mesa = document.querySelector("#mesa");
   let cartasEmbaralhadas = embaralhaCartas(cartas);
   mesa.innerHTML = "";
