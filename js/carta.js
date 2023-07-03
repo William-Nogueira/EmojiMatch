@@ -24,7 +24,7 @@ function revelar() {
 // Carta coringa
 
 function revelarTodasAsCartas() {
-  audioAcerto = document.querySelector("#audio-ding");
+  audioAcerto = document.querySelector("#audio-coringa");
   audioAcerto.volume = 0.8;
   audioAcerto.play();
   document.querySelectorAll(".carta:not(.acerto)").forEach(function (elemento) {
@@ -84,7 +84,7 @@ function errou(cartas) {
   });
 
   let audioErrou = document.querySelector("#audio-errou");
-  audioErrou.volume = 0.3;
+  audioErrou.volume = 0.28;
   audioErrou.play();
   atualizaContador();
   setTimeout(function () {
@@ -129,6 +129,23 @@ function fimRodada() {
   if (nivelAtual < niveis.length - 1) {
     document.querySelector("#proximoNivel").classList.add("visivel");
   } else {
-    document.querySelector("#endGame").classList.add("visivel");
+    venceJogo();
   }
+}
+
+// Venceu o Jogo
+
+function venceJogo() {
+  document.querySelector("#endGame").classList.add("visivel");
+  let audioVenceu = document.querySelector("#audio-venceu");
+  audioVenceu.volume = 0.8;
+  audioVenceu.play();
+  (() => {
+    new Confetti({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      length: 80,
+      duration: 5000,
+    });
+  })();
 }

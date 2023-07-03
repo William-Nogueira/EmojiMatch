@@ -36,6 +36,7 @@ function iniciar() {
 }
 
 function reiniciar() {
+  document.querySelector("#carta-coringa").style.display = "none";
   nivelAtual = 0;
   atualizaNivel();
   iniciar();

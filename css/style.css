@@ -130,6 +130,13 @@ main {
   justify-content: center;
 }
 
+@media (max-width: 420px) {
+  .mesa {
+    padding-bottom: 150px;
+    margin-top: 0px;
+  }
+}
+
 .coluna0 {
   width: 100px;
   height: 100px;
@@ -194,7 +201,7 @@ main {
   }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 380px) {
   .coluna3 {
     width: 55px;
     height: 55px;
@@ -208,19 +215,27 @@ main {
   margin: 10px;
 }
 
-@media (max-width: 675px) {
+@media (max-height: 915px) {
   .coluna4 {
-    width: 60px;
-    height: 60px;
+    width: 63px;
+    height: 63px;
+    margin: 5.5px;
+  }
+}
+
+@media (max-height: 755px) {
+  .coluna4 {
+    width: 58px;
+    height: 58px;
     margin: 5px;
   }
 }
 
 @media (max-width: 330px) {
   .coluna4 {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+    width: 45px;
+    height: 45px;
+    margin: 4.5px;
   }
 }
 
@@ -430,8 +445,20 @@ button:focus {
   margin-bottom: 40px;
 }
 
-@media (max-width: 675px) {
+@media (max-height: 900px) {
   #carta-coringa {
-    display: none;
+    width: 70px;
+    height: 70px;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-height: 670px) {
+  #carta-coringa {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
   }
 }
