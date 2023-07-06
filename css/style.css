@@ -31,6 +31,7 @@ body {
   justify-content: center;
   text-align: center;
   z-index: 1;
+  padding-top: 20px;
 }
 
 .tela-inicial.visivel {
@@ -41,6 +42,7 @@ body {
   text-transform: uppercase;
   font-size: 5rem;
   margin-top: 0;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 675px) {
@@ -62,6 +64,19 @@ body {
 @media (max-width: 675px) {
   .tela-inicial button {
     min-width: 10rem;
+  }
+}
+
+.dicas {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 675px) {
+  .dicas {
+    font-size: 1rem;
+    margin-bottom: 0px;
+    padding: 15px;
   }
 }
 

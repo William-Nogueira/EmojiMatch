@@ -22,7 +22,7 @@ let niveis = [
   },
   {
     cartas: grupoCartas[0].concat(grupoCartas[1], grupoCartas[2]),
-    movimentosMax: 16,
+    movimentosMax: 15,
   },
   {
     cartas: grupoCartas[0].concat(
@@ -30,7 +30,7 @@ let niveis = [
       grupoCartas[2],
       grupoCartas[3]
     ),
-    movimentosMax: 26,
+    movimentosMax: 25,
   },
   {
     cartas: grupoCartas[0].concat(
@@ -39,6 +39,6 @@ let niveis = [
       grupoCartas[3],
       grupoCartas[4]
     ),
-    movimentosMax: 42,
+    movimentosMax: 40,
   },
 ];
